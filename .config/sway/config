@@ -1,0 +1,134 @@
+set $mod Mod4
+set $term /usr/bin/alacritty
+set $menu 'rofi -modi drun,window -show drun | xargs swaymsg exec'
+set $lock 'swaylock -f -c 000000 -t -i $HOME/.config/sway/lock.png'
+
+output * bg /usr/share/backgrounds/80s_Disco_Dingo_Simulation_by_Abubakar_NK.jpg fill
+output DP-1 resolution 1920x1080 position 0,0 transform 90
+output DVI-I-1 resolution 1920x1080 position 1080,200
+
+input * xkb_layout gb
+
+font pango:Noto Sans Mono 9
+
+exec swayidle -w \
+    timeout 300 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    timeout 600 $lock
+
+exec dunst
+
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+bindsym $mod+space exec $menu
+floating_modifier $mod normal
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+h splith
+bindsym $mod+v splitv
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Ctrl+space focus mode_toggle
+bindsym $mod+a focus parent
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+
+mode "resize" {
+    bindsym Left resize shrink width 10px or 10 ppt
+    bindsym Down resize grow height 10px or 10 ppt
+    bindsym Up resize shrink height 10px or 10 ppt
+    bindsym Right resize grow width 10px or 10 ppt
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# color palette
+set $col_prm #30f0a0
+set $col_sdy #a01060
+set $col_drk #181818
+set $col_brd #383838
+set $col_brt #f8f8f8
+set $col_ind #f0a030
+
+# class                 border   backgrnd text     indicatr child_border
+client.focused          $col_prm $col_drk $col_prm $col_ind $col_prm
+client.focused_inactive $col_sdy $col_drk $col_sdy $col_ind $col_sdy
+client.unfocused        $col_brd $col_drk $col_brt $col_ind $col_brd
+client.urgent           $col_sdy $col_drk $col_sdy $col_ind $col_sdy
+client.placeholder      $col_prm $col_drk $col_prm $col_ind $col_prm
+client.background $col_drk
+
+bar {
+    position top
+    tray_padding 4
+    # separator_symbol /
+    # height 20
+
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+
+    colors {
+        background $col_drk
+        statusline $col_brt
+        separator $col_sdy
+        focused_workspace $col_prm $col_prm $col_drk
+        inactive_workspace $col_drk $col_drk $col_brt
+        urgent_workspace $col_sdy $col_sdy $col_drk
+        binding_mode $col_sdy $col_drk $col_sdy
+    }
+}
+
+bindsym $mod+l exec $lock
+
+default_border pixel 1
+
+gaps inner 16
+gaps outer 0
+smart_gaps on
+smart_borders on
+
+focus_follows_mouse no
+mouse_warping none
+
+include /etc/sway/config.d/*

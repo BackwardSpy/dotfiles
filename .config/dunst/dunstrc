@@ -1,0 +1,32 @@
+[global]
+    follow = keyboard
+    geometry = "0x5-0+20"
+    separator_height = 1
+    padding = 4
+    horizontal_padding = 8
+    frame_width = 1
+    frame_color = "#30f0a0"
+    separator_color = "#282828"
+    font = GohuFont 11
+
+[frame]
+    width = 3
+    color = "#181818"
+
+[shortcuts]
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#181818"
+    foreground = "#D5D5D5"
+    timeout = 10
+
+[urgency_normal]
+    background = "#181818"
+    foreground = "#D5D5D5"
+    timeout = 10
+
+[urgency_critical]
+    background = "#361818"
+    foreground = "#D5D5D5"
+    timeout = 0
