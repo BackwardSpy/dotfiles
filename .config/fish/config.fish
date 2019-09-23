@@ -11,7 +11,7 @@ end
 
 if command -v exa >/dev/null
     function ls
-        exa -lF --git --group-directories-first --time-style long-iso --colour-scale --icons $argv
+        exa -lF --git --group-directories-first --time-style long-iso --colour-scale $argv
     end
 end
 
