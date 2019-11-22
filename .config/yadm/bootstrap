@@ -7,7 +7,7 @@ cd "$HOME"
 yadm submodule update --recursive --init
 
 if [ ! -z $(which python) ]; then
-    python -m pip install --upgrade -r ~/.pip-packages
+    python -m pip install --user --upgrade -r ~/.pip-packages
 fi
 
 if [ ! -f ~/.config/fish/completions/kubernetes-tools.fish ]; then
