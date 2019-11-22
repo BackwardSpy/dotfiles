@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:/usr/local/bin/nvim
 SETUVAR --export --path GOPATH:/Users/chris/Code/go
-SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib\x20\x2dL/usr/local/opt/tcl\x2dtk/lib
+SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib
 SETUVAR SHELL:/usr/local/bin/fish
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
@@ -50,4 +50,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/chris/\x2epyenv/shims\x1e/Users/chris/\x2ecargo/bin\x1e/Users/chris/Code/go/bin\x1e/usr/local/sbin
+SETUVAR fish_user_paths:/Users/chris/\x2epyenv/shims\x1e/Users/chris/\x2ecargo/bin\x1e/Users/chris/\x2elocal/bin\x1e/Users/chris/Code/go/bin\x1e/usr/local/sbin
