@@ -56,3 +56,5 @@ function kod
     echo '    < * ))     ,       ( '
     echo '      `*-._`._(__.--*"`.\\'
 end
+
+source /Users/chris/Library/Preferences/org.dystroy.broot/launcher/fish/br
