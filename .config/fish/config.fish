@@ -11,7 +11,7 @@ end
 
 if command -v exa >/dev/null
     function ls
-        exa -lF --git --group-directories-first --time-style long-iso --colour-scale $argv
+        exa -F --git --group-directories-first --time-style long-iso --colour-scale $argv
     end
 end
 
@@ -49,12 +49,3 @@ function iterm2_print_user_vars
     iterm2_set_user_var kube_namespace "$kube_namespace"
     iterm2_set_user_var git_branch "$git_branch"
 end
-
-function kod
-    echo '[kod]     /"*._         _'
-    echo '      .-*\'`    `*-.._.-\'/'
-    echo '    < * ))     ,       ( '
-    echo '      `*-._`._(__.--*"`.\\'
-end
-
-source /Users/chris/Library/Preferences/org.dystroy.broot/launcher/fish/br
