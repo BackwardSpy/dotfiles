@@ -1,0 +1,13 @@
+[user]
+	email = backwardspy@gmail.com
+	name = Chris Latham
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[alias]
+	code-changes = "!git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -rg | head -10"
+	cc = "!git code-changes"
