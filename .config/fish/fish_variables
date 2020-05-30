@@ -1,15 +1,17 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CFLAGS:\x2dI/usr/local/opt/openssl/include/
 SETUVAR --export --path DYLD_LIBRARY_PATH:/Users/chris/\x2elocal/lib
 SETUVAR --export EDITOR:/usr/local/bin/nvim
 SETUVAR --export --path GOPATH:/Users/chris/Code/go
-SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib
+SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib/
 SETUVAR SHELL:/usr/local/bin/fish
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_c:pbcopy
+SETUVAR _fish_abbr_code:code\x2dinsiders
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gb:git\x20branch
 SETUVAR _fish_abbr_gc:git\x20commit

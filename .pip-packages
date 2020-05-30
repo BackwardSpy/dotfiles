@@ -1,6 +1,11 @@
+pip
 black==19.10b0
 flake8
 ptpython
 pipenv
+poetry
 matplotlib
 requests
+django
+pytest
+pytest-django
