@@ -9,3 +9,7 @@ requests
 django
 pytest
 pytest-django
+asciinema
+maturin
+cffi
+pendulum

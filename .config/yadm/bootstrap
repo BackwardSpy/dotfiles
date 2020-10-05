@@ -10,10 +10,6 @@ if [ ! -z $(which python) ]; then
     python -m pip install --user --upgrade -r ~/.pip-packages
 fi
 
-if [ ! -f ~/.config/fish/completions/kubernetes-tools.fish ]; then
-    wget https://raw.githubusercontent.com/shawnxlw/kubernetes-tools/master/completion/kubernetes-tools.fish -O ~/.config/fish/completions/kubernetes-tools.fish
-fi
-
 if [ ! -f ~/.config/fish/completions/kubectl.fish ]; then
     wget https://raw.githubusercontent.com/evanlucas/fish-kubectl-completions/master/completions/kubectl.fish -O ~/.config/fish/completions/kubectl.fish
 fi
