@@ -4,7 +4,7 @@ SETUVAR --export CFLAGS:\x2dI/usr/local/opt/openssl/include/
 SETUVAR --export --path DYLD_LIBRARY_PATH:/Users/chris/\x2elocal/lib
 SETUVAR --export EDITOR:/usr/local/bin/nvim
 SETUVAR --export --path GOPATH:/Users/chris/Code/go
-SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib/
+SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib/\x20\x2dL/usr/local/opt/zlib/lib\x20\x2dL/usr/local/opt/bzip2/lib
 SETUVAR SHELL:/usr/local/bin/fish
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
@@ -26,6 +26,7 @@ SETUVAR _fish_abbr_kns:kubens
 SETUVAR _fish_abbr_pi:pipenv\x20install
 SETUVAR _fish_abbr_pr:pipenv\x20run
 SETUVAR _fish_abbr_psh:pipenv\x20shell
+SETUVAR _fish_abbr_tools:pipenv\x20install\x20\x2d\x2ddev\x20black\x3d\x3d20\x2e8b1\x20flake8\x20mypy\x20pytest
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:808080
 SETUVAR fish_color_cancel:normal
