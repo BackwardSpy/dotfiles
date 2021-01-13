@@ -26,7 +26,7 @@ SETUVAR _fish_abbr_kns:kubens
 SETUVAR _fish_abbr_pi:pipenv\x20install
 SETUVAR _fish_abbr_pr:pipenv\x20run
 SETUVAR _fish_abbr_psh:pipenv\x20shell
-SETUVAR _fish_abbr_tools:pipenv\x20install\x20\x2d\x2ddev\x20black\x3d\x3d20\x2e8b1\x20flake8\x20mypy\x20pytest
+SETUVAR _fish_abbr_tools:pipenv\x20install\x20\x2d\x2ddev\x20black\x3d\x3d20\x2e8b1\x20flake8\x20mypy\x20pytest\x20ptpython
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:808080
 SETUVAR fish_color_cancel:normal
@@ -57,4 +57,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/chris/\x2epyenv/shims\x1e/Users/chris/\x2ecargo/bin\x1e/Users/chris/\x2elocal/bin\x1e/Users/chris/Code/go/bin\x1e/usr/local/opt/ruby/bin\x1e/usr/local/lib/ruby/gems/2\x2e6\x2e0/bin\x1e/usr/local/sbin
+SETUVAR fish_user_paths:/Users/chris/\x2epyenv/shims\x1e/Users/chris/\x2ecargo/bin\x1e/Users/chris/\x2elocal/bin\x1e/usr/local/sbin
