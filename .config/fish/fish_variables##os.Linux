@@ -1,10 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export CFLAGS:\x2dL/usr/local/opt/openssl/include/\x20\x2dL/usr/local/opt/zlib/include/\x20\x2dL/usr/local/opt/bzip2/include/
-SETUVAR --export --path DYLD_LIBRARY_PATH:/Users/chris/\x2elocal/lib
-SETUVAR --export EDITOR:/usr/local/bin/nvim
-SETUVAR --export --path GOPATH:/Users/chris/\x2elocal/go
-SETUVAR --export LDFLAGS:\x2dL/usr/local/opt/openssl/lib/\x20\x2dL/usr/local/opt/zlib/lib/\x20\x2dL/usr/local/opt/bzip2/lib/
+SETUVAR --export EDITOR:/home/linuxbrew/\x2elinuxbrew/bin/nvim
+SETUVAR --export PYENV_ROOT:/home/chris/\x2epyenv
 SETUVAR SHELL:/usr/local/bin/fish
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
@@ -58,4 +55,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/chris/\x2epoetry/bin\x1e/Users/chris/\x2epyenv/shims\x1e/Users/chris/\x2elocal/go/bin\x1e/Users/chris/\x2elocal/bin\x1e/usr/local/sbin
+SETUVAR fish_user_paths:/home/chris/\x2epyenv/bin\x1e/home/chris/\x2elocal/go/bin\x1e/home/chris/\x2elocal/bin
