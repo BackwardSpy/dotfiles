@@ -3,12 +3,7 @@ black==20.8b1
 flake8
 ptpython
 pipenv
-poetry
 requests
 django
-pytest
-pytest-django
 asciinema
-maturin
-cffi
 pendulum
