@@ -26,18 +26,6 @@ _maybe_source $HOME/.iterm2_shell_integration.fish
 
 functions -e _maybe_source
 
-function pyenv
-    set command $argv[1]
-    set -e argv[1]
-
-    switch "$command"
-        case rehash shell
-            source (pyenv "sh-$command" $argv|psub)
-        case '*'
-            command pyenv "$command" $argv
-    end
-end
-
 function iterm2_print_user_vars
     set -l kube_context (kubectl config current-context)
     set -l kube_namespace (kubectl config view --minify --output 'jsonpath={..namespace}')
@@ -47,3 +35,8 @@ function iterm2_print_user_vars
     iterm2_set_user_var kube_namespace "$kube_namespace"
     iterm2_set_user_var git_branch "$git_branch"
 end
+
+if command -v pyenv 1>/dev/null 2>&1
+  pyenv init - | source
+end
+
