@@ -13,3 +13,5 @@
 	cc = "!git code-changes"
 [pull]
 	rebase = true
+[init]
+	defaultBranch = master
